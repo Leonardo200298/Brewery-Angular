@@ -16,7 +16,7 @@
       <td>{{beer.ibu}}</td>
       <!-- Por que no puedo hacerlo asi??? -->
       <!-- <td *ngIf="beer.stock==0"></td> -->
-      <td *ngIf="beer.stock==0; else templateElse">SIN STOCK</td>
+      <td class="badge rounded-pill text-bg-warning" *ngIf="beer.stock==0; else templateElse">SIN STOCK</td>
       <ng-template #templateElse>
         <p>{{beer.stock}}</p>
       </ng-template>
