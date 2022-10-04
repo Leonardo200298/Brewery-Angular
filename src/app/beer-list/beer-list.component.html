@@ -14,7 +14,12 @@
       <td>{{beer.tipo}}</td>
       <td>{{beer.precio}}</td>
       <td>{{beer.ibu}}</td>
-      <td>{{beer.stock}}</td>
+      <!-- Por que no puedo hacerlo asi??? -->
+      <!-- <td *ngIf="beer.stock==0"></td> -->
+      <td *ngIf="beer.stock==0; else templateElse">SIN STOCK</td>
+      <ng-template #templateElse>
+        <p>{{beer.stock}}</p>
+      </ng-template>
     </tr>
 
   </tbody>

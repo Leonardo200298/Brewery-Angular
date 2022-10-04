@@ -27,8 +27,23 @@ export class BeerListComponent implements OnInit {
     tipo: "lager",
     precio: 390,
     ibu: 11.3,
-    stock: 138
-  }]
+    stock: 0
+  },
+  {
+    nombre: "la primavera",
+    tipo: "IPA",
+    precio: 400,
+    ibu: 43.3,
+    stock: 0
+  },
+  {
+    nombre: "la ladrona",
+    tipo: "Stout",
+    precio: 410,
+    ibu: 10.2,
+    stock: 33
+  },
+]
 
   constructor() { }
 

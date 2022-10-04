@@ -4,5 +4,5 @@ export interface Beer{
     precio:number,
     ibu:number,
     stock:number
-
+    
 }
