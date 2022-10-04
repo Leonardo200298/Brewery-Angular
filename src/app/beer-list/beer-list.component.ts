@@ -8,7 +8,7 @@ import { Beer } from './beer';
 
 export class BeerListComponent implements OnInit {
   
-  beer:Beer[] = [{
+  beers:Beer[] = [{
     nombre: "La negra",
     tipo: "Porter",
     precio: 400,
