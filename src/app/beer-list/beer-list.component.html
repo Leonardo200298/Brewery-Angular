@@ -1,11 +1,12 @@
 <table class="table table-light table-hover">
   <thead>
     <tr>
-      <th scope="col">Nombre</th>
-      <th scope="col">Tipo</th>
-      <th scope="col">Precio</th>
-      <th scope="col">IBU</th>
-      <th scope="col">Stock</th>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Precio</th>
+      <th>IBU</th>
+      <th>Stock</th>
+      <th>Compra</th>
     </tr>
   </thead>
   <tbody>
@@ -20,6 +21,7 @@
       <ng-template #templateElse>
         <p>{{beer.stock}}</p>
       </ng-template>
+      <td><button class="btn btn-primary">-</button><button class="btn btn-primary">+</button></td>
     </tr>
 
   </tbody>
