@@ -66,4 +66,7 @@ export class BeerListComponent implements OnInit {
     if (beer.cantidad > 0)
     beer.cantidad--;
   }
+  cambioDeCantidad(event, beer:Beer):void{
+    console.log(event);
+  }
 }

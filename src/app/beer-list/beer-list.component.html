@@ -21,7 +21,7 @@
       <ng-template #templateElse>
         <p>{{beer.stock}}</p>
       </ng-template>
-      <td><button class="btn btn-primary btn-sm" (click)="decrementar(beer)">-</button><input type="text" [value]="beer.cantidad"><button class="btn btn-primary btn-sm" (click)="incrementar(beer)">+</button></td>
+      <td><button class="btn btn-primary btn-sm" (click)="decrementar(beer)">-</button><input type="text" [(ngModel)]="beer.cantidad" (keyup)="cambioDeCantidad($event,beer)"><button class="btn btn-primary btn-sm" (click)="incrementar(beer)">+</button></td>
     </tr>
 
   </tbody>
