@@ -56,10 +56,14 @@ export class BeerListComponent implements OnInit {
   }
 
   incrementar(beer:Beer):void{
-    beer.cantidad++;
+    if (beer.cantidad < beer.stock) 
+      beer.cantidad++;
+      
+    
   }
 
   decrementar(beer:Beer):void{
+    if (beer.cantidad > 0)
     beer.cantidad--;
   }
 }
