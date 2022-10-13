@@ -3,6 +3,7 @@ export interface Beer{
     tipo:string,
     precio:number,
     ibu:number,
-    stock:number
+    stock:number,
+    cantidad:number,
     
 }
