@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BeerListComponent } from './beer-list/beer-list.component';
 import { BreweryAboutComponent } from './brewery-about/brewery-about.component';
 import { BreweryBeersComponent } from './brewery-beers/brewery-beers.component';
-import { CarritoComponent } from './carrito/carrito.component';
+import { CarritoComponent } from './cart/carrito.component';
 
 @NgModule({
   declarations: [
