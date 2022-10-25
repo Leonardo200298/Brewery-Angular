@@ -5,6 +5,11 @@ import { BreweryAboutComponent } from './brewery-about/brewery-about.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'beers',
+    pathMatch:'full'
+  },
+  {
     path: 'beers',
     component: BreweryBeersComponent
   },
