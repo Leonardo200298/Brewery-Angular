@@ -17,12 +17,12 @@
       <td>{{beer.ibu}}</td>
       <!-- Por que no puedo hacerlo asi??? -->
       <!-- <td *ngIf="beer.stock==0"></td> -->
-      <td class="badge rounded-pill text-bg-warning" *ngIf="beer.stock==0; else templateElse">SIN STOCK</td>
-      <ng-template #templateElse>
-        <p>{{beer.stock}}</p>
-      </ng-template>
-      <td><button class="btn btn-primary btn-sm" (click)="decrementar(beer)">-</button><input type="text" [(ngModel)]="beer.cantidad" (keyup)="cambioDeCantidad($event,beer)"><button class="btn btn-primary btn-sm" (click)="incrementar(beer)">+</button></td>
+      <!-- <div *ngIf="beer.stock"><app-input-number></app-input-number></div> -->
+      <td><span class="badge text-bg-warning" *ngIf="beer.stock===0">SIN STOCK</span></td>
+      <td>
+        <app-input-number [beer]="beer" *ngIf="beer.stock"></app-input-number>
+      </td>
     </tr>
-
+    
   </tbody>
 </table>

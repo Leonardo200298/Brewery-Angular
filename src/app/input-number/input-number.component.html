@@ -1,1 +1,17 @@
-<p>input-number works!</p>
+<!-- <td class="badge rounded-pill text-bg-warning">SIN STOCK</td>
+
+<td><button class="btn btn-primary btn-sm" (click)="decrementar(beer)">-</button><input type="text"
+        [(ngModel)]="beer.cantidad" (keyup)="cambioDeCantidad($event,beer)"><button class="btn btn-primary btn-sm"
+        (click)="incrementar(beer)">+</button></td> -->
+
+       
+            <div class="form-group">
+               <button type="button" class="btn btn-primary btn-sm" (click)="decrementar(beer)">
+                   <span class="glyphicon glyphicon-minus" aria-hidden="true">-</span>
+               </button>            
+               <input class="smallInput" type="number" [(ngModel)]="beer.cantidad" (focusout)="cambioDeCantidad(beer)"/>
+               <button type="button" class="btn btn-primary btn-sm" (click)="incrementar(beer)">
+                   <span class="glyphicon glyphicon-plus" aria-hidden="true">+</span>
+               </button>
+             </div>
+          

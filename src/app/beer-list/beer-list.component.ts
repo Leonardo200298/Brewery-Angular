@@ -55,18 +55,5 @@ export class BeerListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  incrementar(beer:Beer):void{
-    if (beer.cantidad < beer.stock) 
-      beer.cantidad++;
-      
-    
-  }
-
-  decrementar(beer:Beer):void{
-    if (beer.cantidad > 0)
-    beer.cantidad--;
-  }
-  cambioDeCantidad(event, beer:Beer):void{
-    console.log(event);
-  }
+ 
 }
