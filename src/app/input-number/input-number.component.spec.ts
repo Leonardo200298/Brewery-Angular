@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BreweryBeersComponent } from './brewery-beers.component';
+import { InputNumberComponent } from './input-number.component';
 
-describe('BreweryBeersComponent', () => {
-  let component: BreweryBeersComponent;
-  let fixture: ComponentFixture<BreweryBeersComponent>;
+describe('InputNumberComponent', () => {
+  let component: InputNumberComponent;
+  let fixture: ComponentFixture<InputNumberComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BreweryBeersComponent ]
+      declarations: [ InputNumberComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BreweryBeersComponent);
+    fixture = TestBed.createComponent(InputNumberComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
