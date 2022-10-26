@@ -20,7 +20,8 @@
       <!-- <div *ngIf="beer.stock"><app-input-number></app-input-number></div> -->
       <td><span class="badge text-bg-warning" *ngIf="beer.stock===0">SIN STOCK</span></td>
       <td>
-        <app-input-number [beer]="beer" *ngIf="beer.stock"></app-input-number>
+        <!-- Lo paso por props componente de ts -->
+        <app-input-number [(cantidad)]="beer.cantidad" [max]="beer.cantidad" *ngIf="beer.stock"></app-input-number>
       </td>
     </tr>
     

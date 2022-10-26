@@ -6,11 +6,11 @@
 
        
             <div class="form-group">
-               <button type="button" class="btn btn-primary btn-sm" (click)="decrementar(beer)">
+               <button type="button" class="btn btn-primary btn-sm" (click)="decrementar()">
                    <span class="glyphicon glyphicon-minus" aria-hidden="true">-</span>
                </button>            
-               <input class="smallInput" type="number" [(ngModel)]="beer.cantidad" (focusout)="cambioDeCantidad(beer)"/>
-               <button type="button" class="btn btn-primary btn-sm" (click)="incrementar(beer)">
+               <input class="smallInput" type="number" [(ngModel)]="cantidad" (keyup)="cambioDeCantidad($event)"/>
+               <button type="button" class="btn btn-primary btn-sm" (click)="incrementar()">
                    <span class="glyphicon glyphicon-plus" aria-hidden="true">+</span>
                </button>
              </div>
