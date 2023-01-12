@@ -21,7 +21,9 @@
       <td><span class="badge text-bg-warning" *ngIf="beer.stock===0">SIN STOCK</span></td>
       <td>
         <!-- Lo paso por props componente de ts -->
-        <app-input-number [(cantidad)]="beer.cantidad" [max]="beer.cantidad" *ngIf="beer.stock"></app-input-number>
+        <!-- investigar porque no me funciona la sintaxis de caja de bananas -->
+        <app-input-number [cant]="beer.cantidad" [max]="beer.stock" *ngIf="beer.stock"></app-input-number>
+        <p href="">cantidad de birras: {{beer.cantidad}}</p>
       </td>
     </tr>
     

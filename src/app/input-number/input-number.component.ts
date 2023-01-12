@@ -1,5 +1,4 @@
 import { Component,EventEmitter,Input, OnInit, Output } from '@angular/core';
-import { Beer } from '../beer-list/beer';
 
 @Component({
   selector: 'app-input-number',
@@ -8,10 +7,12 @@ import { Beer } from '../beer-list/beer';
 })
 export class InputNumberComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+  }
+
   /* Recibe valores de entrada, es la forma de representar cuando llegan con @Input() */
   @Input()
-  cantidad: number;
+  cant: number;
   @Input()
   max: number;
 
@@ -21,23 +22,23 @@ export class InputNumberComponent implements OnInit {
   }
 
   incrementar():void{
-    if (this.cantidad < this.max){
-      this.cantidad++;
-      this.cambiosDeCantiddad.emit(this.cantidad);
+    if (this.cant < this.max){
+      this.cant++;
+      this.cambiosDeCantiddad.emit(this.cant);
     }
       
     
   }
 
   decrementar():void{
-    if (this.cantidad > 0){
-      this.cantidad--;
-      this.cambiosDeCantiddad.emit(this.cantidad);
+    if (this.cant > 0){
+      this.cant--;
+      this.cambiosDeCantiddad.emit(this.cant);
     }
   }
   cambioDeCantidad(event):void{
    console.log(event.key);
-   this.cambiosDeCantiddad.emit(this.cantidad);
+   this.cambiosDeCantiddad.emit(this.cant);
   }
   
   
