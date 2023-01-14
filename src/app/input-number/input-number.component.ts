@@ -17,14 +17,14 @@ export class InputNumberComponent implements OnInit {
   max: number;
 
   @Output()
-  cambiosDeCantiddad: EventEmitter<number> = new EventEmitter<number>();
+  cantChange: EventEmitter<number> = new EventEmitter<number>();
   ngOnInit(): void {
   }
 
   incrementar():void{
     if (this.cant < this.max){
       this.cant++;
-      this.cambiosDeCantiddad.emit(this.cant);
+      this.cantChange.emit(this.cant);
     }
       
     
@@ -33,12 +33,12 @@ export class InputNumberComponent implements OnInit {
   decrementar():void{
     if (this.cant > 0){
       this.cant--;
-      this.cambiosDeCantiddad.emit(this.cant);
+      this.cantChange.emit(this.cant);
     }
   }
   cambioDeCantidad(event):void{
    console.log(event.key);
-   this.cambiosDeCantiddad.emit(this.cant);
+   this.cantChange.emit(this.cant);
   }
   
   

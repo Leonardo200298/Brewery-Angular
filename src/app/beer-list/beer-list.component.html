@@ -13,7 +13,7 @@
     <tr *ngFor="let beer of beers">
       <th scope="row">{{beer.nombre}}</th>
       <td>{{beer.tipo}}</td>
-      <td>{{beer.precio}}</td>
+      <td>{{beer.precio | currency}}</td>
       <td>{{beer.ibu}}</td>
       <!-- Por que no puedo hacerlo asi??? -->
       <!-- <td *ngIf="beer.stock==0"></td> -->
@@ -22,7 +22,7 @@
       <td>
         <!-- Lo paso por props componente de ts -->
         <!-- investigar porque no me funciona la sintaxis de caja de bananas -->
-        <app-input-number [cant]="beer.cantidad" [max]="beer.stock" *ngIf="beer.stock"></app-input-number>
+        <app-input-number [(cant)]="beer.cantidad" [max]="beer.stock" *ngIf="beer.stock"></app-input-number>
         <p href="">cantidad de birras: {{beer.cantidad}}</p>
       </td>
     </tr>
