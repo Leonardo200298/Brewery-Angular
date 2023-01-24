@@ -23,9 +23,11 @@
         <!-- Lo paso por props componente de ts -->
         <!-- investigar porque no me funciona la sintaxis de caja de bananas -->
         <app-input-number [(cant)]="beer.cantidad" [max]="beer.stock" *ngIf="beer.stock"></app-input-number>
-        <p href="">cantidad de birras: {{beer.cantidad}}</p>
+        <br/>
+        <button class="btn btn-primary" (click)="addToCart(beer)">Comprar</button>
+
       </td>
     </tr>
-    
+
   </tbody>
 </table>
